@@ -1,23 +1,23 @@
 import React, { useState, useEffect } from "react";
 import mapboxgl from 'mapbox-gl';
 
-import "./Map.css"
-import points from "./points.json";
+import "Map.css"
+import points from "points.json";
+import token from "token.json";
 
-const ACCESS_TOKEN = "pk.eyJ1IjoidGlja2xlbXluYXVzZWEiLCJhIjoiY2tjNjRmZjRrMG55OTJ2cml1am1wYm5wYiJ9.UdCvI7hHAUYEWdcmiwm78w";
 const PORTO_LNG = -8.6291;
 const PORTO_LAT = 41.1579;
 const ZOOM = 13;
 
 const Map = function() {
-  let mapContainer;
-
   const [lng, setLng] = useState(PORTO_LNG);
   const [lat, setLat] = useState(PORTO_LAT);
   const [zoom, setZoom] = useState(ZOOM);
 
+  let mapContainer;
+
   useEffect(() => {
-    mapboxgl.accessToken = ACCESS_TOKEN;
+    mapboxgl.accessToken = token;
 
     const map = new mapboxgl.Map({
       container: mapContainer,
@@ -34,9 +34,9 @@ const Map = function() {
         type: "symbol",
         source: "points",
         layout: {
-        "icon-image": "{icon}-15",
-        "icon-allow-overlap": true
-        }
+          "icon-image": "{icon}-15",
+          "icon-allow-overlap": true
+        },
       });
     });
 
