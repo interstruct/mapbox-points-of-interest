@@ -1,0 +1,50 @@
+{
+  "type": "geojson",
+  "data": {
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "type": "Feature",
+        "properties": {
+          "description": "<strong>omg</strong><p>the game</p>",
+          "icon": "star"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -8.6301,
+            41.1599
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "description": "<strong>Perdi o jogo</strong><p>Perdi o jogo fuuuuuuuuck.</p>",
+          "icon": "star"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -8.6291,
+            41.1579
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "description": "<strong>Perdi o jogo 2</strong><p>Perdi o jogo fml.</p>",
+          "icon": "star"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -8.6221,
+            41.1539
+          ]
+        }
+      }
+    ]
+  }
+}
