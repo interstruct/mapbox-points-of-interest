@@ -6,42 +6,574 @@
       {
         "type": "Feature",
         "properties": {
-          "description": "<strong>omg</strong><p>the game</p>",
+          "description": "<div class=\"popup-content\">\n  <h2>Casa Oriental</h2>\n  <p>R. Campo dos Mártires da Pátria 111, Porto, Portugal</p>\n  <p><p>A assinatura da fachada da loja representa um cen&aacute;rio colonial; uma cena de planta&ccedil;&atilde;o onde um escravo est&aacute; servindo caf&eacute; para seu mestre. A imagem foi repintada ao longo das d&eacute;cadas, mas os protagonistas e seu ambiente permaneceram praticamente inalterados. Aberto desde 1910.</p></p>\n  <img src=\"http://interstructcollective.com/pt/wp-content/uploads/sites/3/2019/05/L1100194x-2.jpg\" alt=\"Casa Oriental\" />\n</div>\n",
           "icon": "star"
         },
         "geometry": {
           "type": "Point",
           "coordinates": [
-            -8.6301,
-            41.1599
+            "-8.615142",
+            "41.145413"
           ]
         }
       },
       {
         "type": "Feature",
         "properties": {
-          "description": "<strong>Perdi o jogo</strong><p>Perdi o jogo fuuuuuuuuck.</p>",
+          "description": "<div class=\"popup-content\">\n  <h2>O Pretinho do Japão</h2>\n  <p>Rua do Bonjardim 496a, Porto, Portugal</p>\n  <p><p>The shop title and central motif is a hybrid; a person of African decent who appears culturally Japanese. There are multiple images and statues of African people serving produce (i.e. coffee, tea, chocolate) within the shop and outdoor cafe. Open since 1947.</p></p>\n  <img src=\"http://interstructcollective.com/pt/wp-content/uploads/sites/3/2019/05/3509_1-2-copy.jpg\" alt=\"O Pretinho do Japão\" />\n</div>\n",
           "icon": "star"
         },
         "geometry": {
           "type": "Point",
           "coordinates": [
-            -8.6291,
-            41.1579
+            "-8.608701",
+            "41.150741"
           ]
         }
       },
       {
         "type": "Feature",
         "properties": {
-          "description": "<strong>Perdi o jogo 2</strong><p>Perdi o jogo fml.</p>",
+          "description": "<div class=\"popup-content\">\n  <h2>Monumento ao Esforço Colonizador Português</h2>\n  <p>Praça do Império, Porto, Portugal</p>\n  <p><p>Created after the <i>Exposi&ccedil;&atilde;o Colonial</i>, held in 1934 at Pal&aacute;cio de Cristal. This imposing 10-metre tall granite monument figuratively represents the main subject-oriented components to the Portuguese colonising endeavour; the missionary, the dealer, the farmer, the soldier, the doctor and the woman.</p></p>\n  <img src=\"http://interstructcollective.com/pt/wp-content/uploads/sites/3/2019/05/60404350_570599123427114_4185724420574150656_n.jpg\" alt=\"Monumento ao Esforço Colonizador Português\" />\n</div>\n",
           "icon": "star"
         },
         "geometry": {
           "type": "Point",
           "coordinates": [
-            -8.6221,
-            41.1539
+            "-8.67223",
+            "41.155473"
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "description": "<div class=\"popup-content\">\n  <h2>Sala Barroca</h2>\n  <p>Casa da Música, Porto, Portugal</p>\n  <p><p>Casa da M&uacute;sica was&nbsp;designed by Dutch architect Rem Koolhaas and was inaugurated in 2005. Sala Barroca functions as a VIP room and is covered with tiles loosely representing various historical and religious events. The only person of colour depicted within this room appears to be serving wine. There is a vast history of confrontations, conflicts and integration between races, yet public depictions of encounters are almost always limited to the master-slave dialectic.</p></p>\n  <img src=\"http://interstructcollective.com/pt/wp-content/uploads/sites/3/2019/05/Screen-Shot-2019-05-14-at-00.44.01.png\" alt=\"Sala Barroca\" />\n</div>\n",
+          "icon": "star"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            "-8.630696",
+            "41.158881"
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "description": "<div class=\"popup-content\">\n  <h2>Casa Oriental</h2>\n  <p>R. Campo dos Mártires da Pátria 111, Porto, Portugal</p>\n  <p><p>A assinatura da fachada da loja representa um cen&aacute;rio colonial; uma cena de planta&ccedil;&atilde;o onde um escravo est&aacute; servindo caf&eacute; para seu mestre. A imagem foi repintada ao longo das d&eacute;cadas, mas os protagonistas e seu ambiente permaneceram praticamente inalterados. Aberto desde 1910.</p></p>\n  <img src=\"http://interstructcollective.com/pt/wp-content/uploads/sites/3/2019/05/L1100194x-2.jpg\" alt=\"Casa Oriental\" />\n</div>\n",
+          "icon": "star"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            "-8.615142",
+            "41.145413"
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "description": "<div class=\"popup-content\">\n  <h2>O Pretinho do Japão</h2>\n  <p>Rua do Bonjardim 496a, Porto, Portugal</p>\n  <p><p>O t&iacute;tulo da loja e motivo central &eacute; um h&iacute;brido; uma pessoa de descendentes africanos que parece culturalmente japonesa. Existem v&aacute;rias imagens e est&aacute;tuas de pessoas africanas que servem produtos (i.e. caf&eacute;, ch&aacute;, chocolate) dentro da loja e no caf&eacute; ao ar livre. Aberto desde 1947.</p></p>\n  <img src=\"http://interstructcollective.com/pt/wp-content/uploads/sites/3/2019/05/3509_1-2-copy.jpg\" alt=\"O Pretinho do Japão\" />\n</div>\n",
+          "icon": "star"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            "-8.608701",
+            "41.150741"
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "description": "<div class=\"popup-content\">\n  <h2>Monumento ao Esforço Colonizador Português</h2>\n  <p>Praça do Império, Porto, Portugal</p>\n  <p><p>Criado ap&oacute;s a Exposi&ccedil;&atilde;o Colonial, realizada em 1934 no Pal&aacute;cio de Cristal. Este imponente monumento de granito, com 10 metros de altura, representa figurativamente os principais componentes orientados para o tema do empreendimento colonizador portugu&ecirc;s; o mission&aacute;rio, o traficante, o agricultor, o soldado, o m&eacute;dico e a mulher.</p></p>\n  <img src=\"http://interstructcollective.com/pt/wp-content/uploads/sites/3/2019/05/60404350_570599123427114_4185724420574150656_n.jpg\" alt=\"Monumento ao Esforço Colonizador Português\" />\n</div>\n",
+          "icon": "star"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            "-8.67223",
+            "41.155473"
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "description": "<div class=\"popup-content\">\n  <h2>Sala Barroca</h2>\n  <p>Casa da Música, Porto, Portugal</p>\n  <p><p>A Casa da M&uacute;sica foi projetada pelo arquiteto holand&ecirc;s Rem Koolhaas e foi inaugurada em 2005. A Sala Barroca funciona como uma sala VIP e &eacute; coberta com azulejos que representam vagamente v&aacute;rios eventos hist&oacute;ricos e religiosos. A &uacute;nica pessoa de cor retratada dentro desta sala parece estar servindo vinho. H&aacute; uma vasta hist&oacute;ria de confrontos, conflitos e integra&ccedil;&atilde;o entre ra&ccedil;as, mas as representa&ccedil;&otilde;es p&uacute;blicas de encontros s&atilde;o quase sempre limitadas &agrave; dial&eacute;tica mestre-escravo.</p></p>\n  <img src=\"http://interstructcollective.com/pt/wp-content/uploads/sites/3/2019/05/Screen-Shot-2019-05-14-at-00.44.01.png\" alt=\"Sala Barroca\" />\n</div>\n",
+          "icon": "star"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            "-8.630696",
+            "41.158881"
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "description": "<div class=\"popup-content\">\n  <h2>World of Discoveries</h2>\n  <p>Rua de Miragaia 106, 4050-387 Porto, Portugal</p>\n  <p><p>O World of Discoveries &eacute; um museu multim&iacute;dia e interativo que \"reencena a fant&aacute;stica odisseia dos navegadores portugueses, cruzando oceanos para descobrir um mundo at&eacute; ent&atilde;o desconhecido\". Pouco ou nenhuma informa&ccedil;&atilde;o cr&iacute;tica ou perspectivas est&atilde;o dispon&iacute;veis. Quais foram as impress&otilde;es do outro lado do encontro? Uma abordagem mais hol&iacute;stica para exibi&ccedil;&otilde;es educacionais e recorda&ccedil;&otilde;es de hist&oacute;rias pode fornecer maior compreens&atilde;o e empatia dentro e entre as comunidades.</p></p>\n  <img src=\"http://interstructcollective.com/pt/wp-content/uploads/sites/3/2019/05/60738809_314382662787998_3769008293876334592_n-copy.jpg\" alt=\"World of Discoveries\" />\n</div>\n",
+          "icon": "star"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            "-8.620813",
+            "41.143451"
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "description": "<div class=\"popup-content\">\n  <h2>Xai-Xai</h2>\n  <p>Rua da Constituição 1, 4200-300 Porto, Portugal</p>\n  <p><p>Xai-Xai &eacute; tamb&eacute;m o nome de uma cidade costeira no sul de Mo&ccedil;ambique. Anteriormente conhecido como Jo&atilde;o Belo, a cidade era um porto companheiro de Louren&ccedil;o Marques (atual Maputo) durante o dom&iacute;nio portugu&ecirc;s e a praia se tornou um destino tur&iacute;stico popular.</p></p>\n  <img src=\"http://interstructcollective.com/pt/wp-content/uploads/sites/3/2019/05/IMG_3372.jpg\" alt=\"Xai-Xai\" />\n</div>\n",
+          "icon": "star"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            "-8.59841",
+            "41.161023"
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "description": "<div class=\"popup-content\">\n  <h2>Mercearia Imperial</h2>\n  <p>Av. de Fernão de Magalhães 30, Porto, Portugal</p>\n  <p></p>\n  <img src=\"http://interstructcollective.com/pt/wp-content/uploads/sites/3/2019/05/60821411_439243203316348_3915153377985560576_n.jpg\" alt=\"Mercearia Imperial\" />\n</div>\n",
+          "icon": "star"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            "-8.597997",
+            "41.150455"
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "description": "<div class=\"popup-content\">\n  <h2>Café Império</h2>\n  <p>R. Aires de Ornelas 3, 4350-034 Porto, Portugal</p>\n  <p><p>// Desde 1973 - Caf&eacute; Imp&eacute;rio // - &eacute; como quando voc&ecirc; chega a essa grande festa, mas est&aacute; quase no fim.</p></p>\n  <img src=\"http://interstructcollective.com/pt/wp-content/uploads/sites/3/2019/05/61510056_1162140053971337_1384938622939037696_o.jpg\" alt=\"Café Império\" />\n</div>\n",
+          "icon": "star"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            "-8.59527",
+            "41.155468"
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "description": "<div class=\"popup-content\">\n  <h2>\"Colonização nem aqui nem na Palestina\"</h2>\n  <p>R. do Bonjardim 621, Porto, Portugal</p>\n  <p><p>\"Colonization neither here nor in Palestine\" foto tirada em 14/02/2019.</p></p>\n  <img src=\"http://interstructcollective.com/pt/wp-content/uploads/sites/3/2019/05/50620504_319503038688460_996325107209076736_n.jpg\" alt=\"\"Colonização nem aqui nem na Palestina\"\" />\n</div>\n",
+          "icon": "star"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            "-8.607925",
+            "41.153695"
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "description": "<div class=\"popup-content\">\n  <h2>Estátua de Conguitos</h2>\n  <p>Rua de Santos Pousada 1222, 4000-483 Porto, Portugal</p>\n  <p><p>Esta representa&ccedil;&atilde;o evoluiu e simplificou ao longo das d&eacute;cadas; a ilustra&ccedil;&atilde;o original mostra um grupo de pessoas negras segurando lan&ccedil;as. \"Conguitos\" pode ser interpretado como um diminutivo paternalista de \"congoleses\". Foto tirada no P&atilde;o Quente-estrela Branca Lda em 22/03/2019.</p></p>\n  <img src=\"http://interstructcollective.com/pt/wp-content/uploads/sites/3/2019/05/IMG_2361.jpg\" alt=\"Estátua de Conguitos\" />\n</div>\n",
+          "icon": "star"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            "-8.598354",
+            "41.159652"
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "description": "<div class=\"popup-content\">\n  <h2>Bar B</h2>\n  <p>Passeio de São Lázaro 19, 4000-222, Porto, Portugal</p>\n  <p><p>Publicidade para A&ccedil;&uacute;car Polan&ccedil;a.</p></p>\n  <img src=\"http://interstructcollective.com/pt/wp-content/uploads/sites/3/2019/05/IMG_3341-copy.jpg\" alt=\"Bar B\" />\n</div>\n",
+          "icon": "star"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            "-8.603239",
+            "41.146158"
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "description": "<div class=\"popup-content\">\n  <h2>Feira da Vandoma</h2>\n  <p>Av. 25 de Abril 4300-239, Porto, Portugal</p>\n  <p><p>Um livro no mercado de pulgas de Vandoma; a impress&atilde;o alegre / brilhante / alegre da hist&oacute;ria colonial portuguesa e da expans&atilde;o internacional.</p></p>\n  <img src=\"http://interstructcollective.com/pt/wp-content/uploads/sites/3/2019/05/61408222_455595068530585_8942480162084093952_n.jpg\" alt=\"Feira da Vandoma\" />\n</div>\n",
+          "icon": "star"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            "-8.585608",
+            "41.155576"
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "description": "<div class=\"popup-content\">\n  <h2>Café Guarany</h2>\n  <p>Av. dos Aliados 85/89, 4000-066 Porto, Portugal</p>\n  <p><p>Guarani s&atilde;o povos ind&iacute;genas da Am&eacute;rica do Sul do Paraguai, Sul do Brasil e Bol&iacute;via. O guarani &eacute; tamb&eacute;m a l&iacute;ngua falada e pertence &agrave; fam&iacute;lia tupi-guarani; uma das l&iacute;nguas oficiais do Paraguai.</p></p>\n  <img src=\"http://interstructcollective.com/pt/wp-content/uploads/sites/3/2019/05/61127078_2636458963095994_6026483683504947200_n.jpg\" alt=\"Café Guarany\" />\n</div>\n",
+          "icon": "star"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            "-8.611478",
+            "41.14776"
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "description": "<div class=\"popup-content\">\n  <h2>Pastelaria Tupi</h2>\n  <p>R. de Sá da Bandeira 144, 4000-380 Porto, Portugal</p>\n  <p></p>\n  <img src=\"http://interstructcollective.com/pt/wp-content/uploads/sites/3/2019/05/61446692_2222114754567134_477783333216976896_n.jpg\" alt=\"Pastelaria Tupi\" />\n</div>\n",
+          "icon": "star"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            "-8.608656",
+            "41.147225"
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "description": "<div class=\"popup-content\">\n  <h2>La Portuguese / Porto Market</h2>\n  <p>Rua Formosa 200, Porto, Portugal</p>\n  <p><p>Maio 2019 - La Portuguese / Porto Market - Novo artesanato colonial Bazar</p></p>\n  <img src=\"http://interstructcollective.com/pt/wp-content/uploads/sites/3/2019/05/61605843_517013718834596_7399263292683714560_n.jpg\" alt=\"La Portuguese / Porto Market\" />\n</div>\n",
+          "icon": "star"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            "-8.604837",
+            "41.147959"
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "description": "<div class=\"popup-content\">\n  <h2>Restaurante Suribachi</h2>\n  <p>Rua do Bonfim 134, 4300-096 Porto, Portugal</p>\n  <p></p>\n  <img src=\"http://interstructcollective.com/pt/wp-content/uploads/sites/3/2019/07/65455919_382140629316567_4651361899810652160_n.jpg\" alt=\"Restaurante Suribachi\" />\n</div>\n",
+          "icon": "star"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            "-8.597236",
+            "41.149003"
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "description": "<div class=\"popup-content\">\n  <h2>Angola Café</h2>\n  <p>R. Pádua Correia no413, 4430-238 Vila Nova de Gaia, Portugal</p>\n  <p></p>\n  <img src=\"http://interstructcollective.com/pt/wp-content/uploads/sites/3/2019/07/IMG_3781a.jpg\" alt=\"Angola Café\" />\n</div>\n",
+          "icon": "star"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            "-8.605998",
+            "41.12624"
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "description": "<div class=\"popup-content\">\n  <h2>Meta Meta</h2>\n  <p>Rua de Cedofeita 451, 4050-181, Porto, Portugal</p>\n  <p></p>\n  <img src=\"http://interstructcollective.com/pt/wp-content/uploads/sites/3/2019/07/IMG_3719a.jpg\" alt=\"Meta Meta\" />\n</div>\n",
+          "icon": "star"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            "-8.619033",
+            "41.154565"
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "description": "<div class=\"popup-content\">\n  <h2>A Conquistadora</h2>\n  <p>R. da Arménia, Porto, Portugal</p>\n  <p></p>\n  <img src=\"http://interstructcollective.com/pt/wp-content/uploads/sites/3/2019/07/IMG_3703a.jpg\" alt=\"A Conquistadora\" />\n</div>\n",
+          "icon": "star"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            "-8.618794",
+            "41.142038"
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "description": "<div class=\"popup-content\">\n  <h2>Paragem de autocarro Timor</h2>\n  <p>4150-516, Porto, Portugal</p>\n  <p></p>\n  <img src=\"http://interstructcollective.com/pt/wp-content/uploads/sites/3/2019/07/IMG_3743a.jpg\" alt=\"Paragem de autocarro Timor\" />\n</div>\n",
+          "icon": "star"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            "-8.687453",
+            "41.16591"
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "description": "<div class=\"popup-content\">\n  <h2>Novo Imperador</h2>\n  <p>Praça do Marquês de Pombal 154, 4200-193 Porto, Portugal</p>\n  <p></p>\n  <img src=\"http://interstructcollective.com/pt/wp-content/uploads/sites/3/2019/08/IMG_38081.jpg\" alt=\"Novo Imperador\" />\n</div>\n",
+          "icon": "star"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            "-8.603931",
+            "41.161592"
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "description": "<div class=\"popup-content\">\n  <h2>Confeitaria Império</h2>\n  <p>Rua de Fernandes Tomás 775, 4200-025 Porto</p>\n  <p></p>\n  <img src=\"http://interstructcollective.com/pt/wp-content/uploads/sites/3/2019/08/IMG_3883.jpg\" alt=\"Confeitaria Império\" />\n</div>\n",
+          "icon": "star"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            "-8.60765",
+            "41.150166"
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "description": "<div class=\"popup-content\">\n  <h2>Mercador Guesthouse</h2>\n  <p>Rua de Miguel Bombarda no382, 4050-378 Porto, Portugal</p>\n  <p></p>\n  <img src=\"http://interstructcollective.com/pt/wp-content/uploads/sites/3/2019/08/IMG_38761.jpg\" alt=\"Mercador Guesthouse\" />\n</div>\n",
+          "icon": "star"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            "-8.621447",
+            "41.149676"
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "description": "<div class=\"popup-content\">\n  <h2>Café Locarno</h2>\n  <p>R. Guedes de Azevedo 135, 4000-121 Porto, Portugal</p>\n  <p></p>\n  <img src=\"http://interstructcollective.com/pt/wp-content/uploads/sites/3/2019/08/IMG_38781.jpg\" alt=\"Café Locarno\" />\n</div>\n",
+          "icon": "star"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            "-8.606675",
+            "41.152161"
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "description": "<div class=\"popup-content\">\n  <h2>Torel 1884</h2>\n  <p>Rua de Mouzinho da Silveira 228, Porto, Portugal</p>\n  <p><p>\"Let yourself be whisked away into the world of the Portuguese navigators as they travelled the world, discovering not only foreign lands but also exotic spices, new foods and superb materials within them. Embark on your own exotic journey and breathe in the spirit of the adventurers through our lavish materials, natural colours and exotic plants.\"</p></p>\n  <img src=\"http://interstructcollective.com/pt/wp-content/uploads/sites/3/2019/12/torel-1884-galleryhomepage-5.jpg\" alt=\"Torel 1884\" />\n</div>\n",
+          "icon": "star"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            "-8.612635",
+            "41.143669"
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "description": "<div class=\"popup-content\">\n  <h2>Império d'Avenida</h2>\n  <p>Avenida da República, Porto, Portugal</p>\n  <p></p>\n  <img src=\"http://interstructcollective.com/pt/wp-content/uploads/sites/3/2019/12/PHOTO-2019-12-06-02-12-23.jpg\" alt=\"Império d'Avenida\" />\n</div>\n",
+          "icon": "star"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            "-8.605861",
+            "41.12505"
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "description": "<div class=\"popup-content\">\n  <h2>Restaurante Nova Luanda</h2>\n  <p>Av. de Rodrigues de Freitas 330, Porto, Portugal</p>\n  <p></p>\n  <img src=\"http://interstructcollective.com/pt/wp-content/uploads/sites/3/2019/12/PHOTO-2019-12-06-02-13-24.jpg\" alt=\"Restaurante Nova Luanda\" />\n</div>\n",
+          "icon": "star"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            "-8.604392",
+            "41.145413"
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "description": "<div class=\"popup-content\">\n  <h2>Imperio</h2>\n  <p>Rua de Santa Catarina 149, Porto, Portugal</p>\n  <p></p>\n  <img src=\"http://interstructcollective.com/pt/wp-content/uploads/sites/3/2019/12/PHOTO-2019-12-06-02-14-39.jpg\" alt=\"Imperio\" />\n</div>\n",
+          "icon": "star"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            "-8.606682",
+            "41.147588"
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "description": "<div class=\"popup-content\">\n  <h2>Colonial by Studio66</h2>\n  <p>Travessa do Senhor da Boa Morte 11, Porto, Portugal</p>\n  <p></p>\n  <img src=\"http://interstructcollective.com/pt/wp-content/uploads/sites/3/2019/12/39580485_508488449599335_8321656327508066304_n.jpg\" alt=\"Colonial by Studio66\" />\n</div>\n",
+          "icon": "star"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            "-8.649117",
+            "41.148478"
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "description": "<div class=\"popup-content\">\n  <h2>Millennium bcp</h2>\n  <p>Praça de Dom João I 28, Porto, Portugal</p>\n  <p><p>Essa era originalmente a sede do Banco Portugu&ecirc;s do Atl&acirc;ntico (BPA), que possu&iacute;a neg&oacute;cios no Brasil desde o in&iacute;cio dos anos 30. Foi o edif&iacute;cio mais alto da cidade durante esse per&iacute;odo e o mural representando a explora&ccedil;&atilde;o colonial foi criado em 1951.</p></p>\n  <img src=\"http://interstructcollective.com/pt/wp-content/uploads/sites/3/2020/01/IMG_1144-scaled.jpg\" alt=\"Millennium bcp\" />\n</div>\n",
+          "icon": "star"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            "-8.608881",
+            "41.147975"
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "description": "<div class=\"popup-content\">\n  <h2>Prestige Café</h2>\n  <p>R. do Dr. David Ramalhão 4470-378, Moreira, Portugal</p>\n  <p></p>\n  <img src=\"http://interstructcollective.com/pt/wp-content/uploads/sites/3/2020/01/43443974_721927821488129_7380541577485090816_n-scaled.jpg\" alt=\"Prestige Café\" />\n</div>\n",
+          "icon": "star"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            "-8.66061",
+            "41.239505"
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "description": "<div class=\"popup-content\">\n  <h2>Flor de Damião</h2>\n  <p>R. de Damião de Góis 534, 4050-223 Porto, Portugal</p>\n  <p></p>\n  <img src=\"http://interstructcollective.com/pt/wp-content/uploads/sites/3/2020/01/IMG_2091-scaled.jpg\" alt=\"Flor de Damião\" />\n</div>\n",
+          "icon": "star"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            "-8.615783",
+            "41.162546"
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "description": "<div class=\"popup-content\">\n  <h2>Pastelaria Vale Doce</h2>\n  <p>Av. de Rodrigues de Freitas 177, 4300-096 Porto, Portugal</p>\n  <p></p>\n  <img src=\"http://interstructcollective.com/pt/wp-content/uploads/sites/3/2020/01/Conguitos-scaled.jpg\" alt=\"Pastelaria Vale Doce\" />\n</div>\n",
+          "icon": "star"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            "-8.599254",
+            "41.145771"
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "description": "<div class=\"popup-content\">\n  <h2>O café está na origem</h2>\n  <p>Avenida dos Aliados 307, Porto, Portugal</p>\n  <p></p>\n  <img src=\"http://interstructcollective.com/pt/wp-content/uploads/sites/3/2020/02/IMG_6506-scaled.jpg\" alt=\"O café está na origem\" />\n</div>\n",
+          "icon": "star"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            "-8.61138",
+            "41.149785"
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "description": "<div class=\"popup-content\">\n  <h2>Xai-Xai</h2>\n  <p>Rua da Constituição 1, 4200-300 Porto, Portugal</p>\n  <p></p>\n  <img src=\"http://interstructcollective.com/pt/wp-content/uploads/sites/3/2020/02/83699256_1397895833729090_2574325069903822848_o.jpg\" alt=\"Xai-Xai\" />\n</div>\n",
+          "icon": "star"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            "-8.59841",
+            "41.161023"
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "description": "<div class=\"popup-content\">\n  <h2>Confeitaria Império</h2>\n  <p>Rua de Santa Catarina 149, 4000-381 Porto, Portugal</p>\n  <p></p>\n  <img src=\"http://interstructcollective.com/pt/wp-content/uploads/sites/3/2020/03/87832363_1425663287619011_8512793929937059840_o.jpg\" alt=\"Confeitaria Império\" />\n</div>\n",
+          "icon": "star"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            "-8.606681",
+            "41.147588"
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "description": "<div class=\"popup-content\">\n  <h2>McDonald's</h2>\n  <p>Praça da Liberdade 126, 4000-322 Porto, Portugal</p>\n  <p><p>Conhecido como o \"McDonald's mais bonito do mundo\", devido &agrave;s caracter&iacute;sticas arquitet&ocirc;nicas originais em Art Deco (ou seja, lustre, vitrais, frisos e a ic&ocirc;nica &aacute;guia gigante de bronze na entrada), datada de 1936, quando as instala&ccedil;&otilde;es foram inauguradas como Cafe Imperial. Os vitrais foram feitos por Ricardo Leone.</p></p>\n  <img src=\"http://interstructcollective.com/pt/wp-content/uploads/sites/3/2020/03/McDonalds-1.jpg\" alt=\"McDonald's\" />\n</div>\n",
+          "icon": "star"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            "-8.610839",
+            "41.146664"
           ]
         }
       }
