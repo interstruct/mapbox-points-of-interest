@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import mapboxgl from 'mapbox-gl';
 
-import "Map.css"
+import "Map.scss"
 import points from "points.json";
 import token from "token.json";
 
