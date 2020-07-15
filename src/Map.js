@@ -45,7 +45,7 @@ const Map = function() {
     });
 
     map.on("click", "points", function(e) {
-      var coordinates = e.features[0].geometry.coordinates.slice();
+      var coordinates = e.features[0].geometry.coordinates;
       var properties = e.features[0].properties;
       var id = properties.id;
 
@@ -64,6 +64,10 @@ const Map = function() {
         popupComponent,
         document.querySelector(`#popup-root-${id}`),
       );
+
+      map.flyTo({
+        center: e.features[0].geometry.coordinates,
+      });
     });
 
     map.on("mouseenter", "points", function() {
