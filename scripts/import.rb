@@ -2,6 +2,7 @@
 
 require 'csv'
 require 'json'
+require 'loofah'
 
 def envelope(features)
   {
@@ -13,27 +14,23 @@ def envelope(features)
   }
 end
 
-def description(h)
-  <<~HTML
-    <div class="popup-content">
-      <h2>#{h["title"]}</h2>
-      <p>#{h["address"]}</p>
-      <p>#{h["description"]}</p>
-      <img src="#{h["pic"]}" alt="#{h["title"]}" />
-    </div>
-  HTML
-end
-
 table = CSV.read(ARGV[0], headers: true, col_sep: ";").to_a
 headers = table.shift
 
 table
   .map { |row| Hash[headers.zip(row)] }
-  .map do |h|
+  .map
+  .with_index do |h, n|
+    description = Loofah.fragment(h["description"]).scrub!(:strip).text
+
     {
       type: "Feature",
       properties: {
-        description: description(h),
+        id: n,
+        description: description,
+        address: h["address"],
+        title: h["title"],
+        picture: h["pic"],
         icon: "star",
       },
       geometry: {
