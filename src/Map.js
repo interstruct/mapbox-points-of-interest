@@ -33,6 +33,9 @@ const Map = function() {
       new mapboxgl.NavigationControl(),
       'bottom-right',
     );
+
+    // This control displays the ratio of a distance on the map to the corresponding distance on the ground.
+    map.addControl(new mapboxgl.ScaleControl());
     map.on("load", function() {
       map.addSource("points", points);
 
