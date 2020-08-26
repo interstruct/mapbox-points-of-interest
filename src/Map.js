@@ -36,6 +36,10 @@ const Map = function() {
 
     // This control displays the ratio of a distance on the map to the corresponding distance on the ground.
     map.addControl(new mapboxgl.ScaleControl());
+
+    // Adds a fullscreen button to the map.
+    map.addControl(new mapboxgl.FullscreenControl());
+
     map.on("load", function() {
       map.addSource("points", points);
 
