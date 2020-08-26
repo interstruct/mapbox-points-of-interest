@@ -26,6 +26,13 @@ const Map = function() {
       zoom: zoom
     });
 
+    // The navigation control is the 3 buttons on the bottom right of the map.
+    // It allows to control zoom and orientation of the map using buttons instead of a mouse.
+    // It's usefull to more easly control the map in mobile mode.
+    map.addControl(
+      new mapboxgl.NavigationControl(),
+      'bottom-right',
+    );
     map.on("load", function() {
       map.addSource("points", points);
 
