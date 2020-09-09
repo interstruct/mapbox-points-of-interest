@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
+import ReactDOM from "react-dom";
 import mapboxgl from 'mapbox-gl';
 
+import Popup from "Popup";
 import "Map.scss"
 import points from "points.json";
 import token from "token.json";
@@ -10,9 +12,11 @@ const PORTO_LAT = 41.1579;
 const ZOOM = 13;
 
 const Map = function() {
+  /* eslint-disable no-unused-vars */
   const [lng, setLng] = useState(PORTO_LNG);
   const [lat, setLat] = useState(PORTO_LAT);
   const [zoom, setZoom] = useState(ZOOM);
+  /* eslint-enable no-unused-vars */
 
   let mapContainer;
 
@@ -55,22 +59,38 @@ const Map = function() {
     });
 
     map.on("click", "points", function(e) {
-      var coordinates = e.features[0].geometry.coordinates.slice();
-      var description = e.features[0].properties.description;
+      var coordinates = e.features[0].geometry.coordinates;
+      var properties = e.features[0].properties;
+      var id = properties.id;
+
+      if (document.querySelector(`#popup-root-${id}`)) {
+        return;
+      }
+
+      let popupComponent = <Popup {...properties} />;
 
       new mapboxgl.Popup()
         .setLngLat(coordinates)
-        .setHTML(description)
+        .setHTML(`<div id="popup-root-${id}" />`)
         .addTo(map);
-      });
 
-      map.on("mouseenter", "points", function() {
-        map.getCanvas().style.cursor = "pointer";
-      });
+      ReactDOM.render(
+        popupComponent,
+        document.querySelector(`#popup-root-${id}`),
+      );
 
-      map.on("mouseleave", "points", function() {
-        map.getCanvas().style.cursor = "";
+      map.flyTo({
+        center: e.features[0].geometry.coordinates,
       });
+    });
+
+    map.on("mouseenter", "points", function() {
+      map.getCanvas().style.cursor = "pointer";
+    });
+
+    map.on("mouseleave", "points", function() {
+      map.getCanvas().style.cursor = "";
+    });
   });
 
   return (
