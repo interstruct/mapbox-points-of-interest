@@ -43,8 +43,13 @@ const Map = function() {
 
     // Adds a fullscreen button to the map.
     map.addControl(new mapboxgl.FullscreenControl());
-
+    
     map.on("load", function() {
+      map.loadImage('marker.png', function(error, image) {
+        if(error) console.error(error);
+        map.addImage('marker', image);
+      });
+
       map.addSource("points", points);
 
       map.addLayer({
@@ -52,7 +57,7 @@ const Map = function() {
         type: "symbol",
         source: "points",
         layout: {
-          "icon-image": "{icon}-15",
+          "icon-image": "marker",
           "icon-allow-overlap": true
         },
       });
