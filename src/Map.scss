@@ -6,3 +6,23 @@
 .popup-content img {
   max-width: 200px;
 }
+
+button.toggleStyle {
+  position: absolute;
+  z-index: 1;
+  width: 40px;
+  height: 40px;
+  border-radius: 2px;
+  background: #001d2b;
+  color: #3e5873;
+  border: none;
+  padding: 5px;
+}
+
+#menu {
+  z-index: 1;
+  position: absolute;
+  background: #fff;
+  padding: 5px;
+  font-family: 'Open Sans', sans-serif;
+}

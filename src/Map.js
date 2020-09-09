@@ -18,12 +18,19 @@ const Map = function() {
   const [zoom, setZoom] = useState(ZOOM);
   /* eslint-enable no-unused-vars */
 
+  const styles = {
+    'satellite-v9': 'Satallite',
+    'outdoors-v11': 'Outdoors',
+    'streets-v11': 'Streets',
+  };
+
   let mapContainer;
+  let map;
 
   useEffect(() => {
     mapboxgl.accessToken = token;
 
-    const map = new mapboxgl.Map({
+    map = new mapboxgl.Map({
       container: mapContainer,
       style: "mapbox://styles/mapbox/satellite-v9",
       center: [lng, lat],
@@ -44,7 +51,7 @@ const Map = function() {
     // Adds a fullscreen button to the map.
     map.addControl(new mapboxgl.FullscreenControl());
 
-    map.on("load", function() {
+    map.on("style.load", function() {
       map.addSource("points", points);
 
       map.addLayer({
@@ -93,8 +100,24 @@ const Map = function() {
     });
   });
 
+  const toggleStyle = (style) => (e) => {
+    if (!map) return;
+
+    console.log(style);
+    map.setStyle('mapbox://styles/mapbox/' + style);
+  }
+
   return (
-    <div id="map" ref={(el) => mapContainer = el} />
+    <div id="map" ref={(el) => mapContainer = el}>
+      <div id="menu">
+        {Object.entries(styles).map(([style, label]) => (
+          <div key={label}>
+            <button id={style} onClick={toggleStyle(style)} />
+            <label htmlFor={style}>{label}</label>
+          </div>
+        ))}
+      </div>
+    </div>
   );
 }
 
