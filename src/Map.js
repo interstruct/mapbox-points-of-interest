@@ -20,6 +20,20 @@ const Map = function() {
 
   let mapContainer;
 
+  let loadMarkers = async (map) => {
+    return new Promise((resolve, reject) => {
+      map.loadImage('marker.png', (error, image) => {
+        if (error) {
+          reject(error);
+          return;
+        }
+
+        map.addImage('marker', image);
+        resolve();
+      });
+    });
+  }
+
   useEffect(() => {
     mapboxgl.accessToken = token;
 
@@ -43,12 +57,9 @@ const Map = function() {
 
     // Adds a fullscreen button to the map.
     map.addControl(new mapboxgl.FullscreenControl());
-    
-    map.on("load", function() {
-      map.loadImage('marker.png', function(error, image) {
-        if(error) console.error(error);
-        map.addImage('marker', image);
-      });
+
+    map.on("load", async () => {
+      await loadMarkers(map);
 
       map.addSource("points", points);
 
