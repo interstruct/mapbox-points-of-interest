@@ -31,7 +31,7 @@ table
         address: h["address"],
         title: h["title"],
         picture: h["pic"],
-        icon: "star",
+        icon: h["icon"],
       },
       geometry: {
         type: "Point",
