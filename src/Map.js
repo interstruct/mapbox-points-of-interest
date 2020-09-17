@@ -12,6 +12,27 @@ import markers from "markers.json";
 const PORTO_LNG = -8.6291;
 const PORTO_LAT = 41.1579;
 const ZOOM = 13;
+const IS_MOVING_POLLING_INTERVAL = 50;
+
+const flyTo = (map, coordinates) => {
+  map.flyTo({
+    center: coordinates,
+  });
+
+  return new Promise((resolve, _reject) => {
+    const interval = setInterval(() => {
+      if (!map.isMoving()) {
+        resolve();
+        return;
+      }
+
+      if (!map.isMoving()) {
+        clearInterval(interval);
+        resolve();
+      }
+    }, IS_MOVING_POLLING_INTERVAL);
+  });
+}
 
 let loadMarkers = async (map, markers) => {
   return Promise.all(
@@ -31,7 +52,9 @@ let loadMarkers = async (map, markers) => {
   )
 };
 
-const loadPoints = (map, points) => {
+const loadPoints = async (map, points) => {
+  let popup = null;
+
   map.addSource("points", points)
 
   map.addLayer({
@@ -44,7 +67,21 @@ const loadPoints = (map, points) => {
     },
   });
 
-  map.on("click", "points", function(e) {
+  map.on("click", (e) => {
+    if (popup) {
+      popup.remove();
+      popup = null;
+    }
+  });
+
+  map.on("move", (e) => {
+    if (popup) {
+      popup.remove();
+      popup = null;
+    }
+  });
+
+  map.on("click", "points", async (e) => {
     var coordinates = e.features[0].geometry.coordinates;
     var properties = e.features[0].properties;
     var id = properties.id;
@@ -54,20 +91,21 @@ const loadPoints = (map, points) => {
     }
 
     let popupComponent = <Popup {...properties} />;
+    let popupOptions = {
+      maxWidth: "none",
+    };
 
-    new mapboxgl.Popup()
+    await flyTo(map, e.features[0].geometry.coordinates);
+
+    popup = new mapboxgl.Popup(popupOptions)
       .setLngLat(coordinates)
-      .setHTML(`<div id="popup-root-${id}" />`)
+      .setHTML(`<div id="popup-root-${id}" class="popup-root" />`)
       .addTo(map);
 
     ReactDOM.render(
       popupComponent,
       document.querySelector(`#popup-root-${id}`),
     );
-
-    map.flyTo({
-      center: e.features[0].geometry.coordinates,
-    });
   });
 
   map.on("mouseenter", "points", function() {
@@ -78,6 +116,7 @@ const loadPoints = (map, points) => {
     map.getCanvas().style.cursor = "";
   });
 };
+
 
 const Map = function() {
   /* eslint-disable no-unused-vars */
@@ -114,7 +153,7 @@ const Map = function() {
 
     map.on("load", async () => {
       await loadMarkers(map, markers);
-      loadPoints(map, points);
+      await loadPoints(map, points);
     });
   });
 

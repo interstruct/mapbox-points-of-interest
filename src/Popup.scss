@@ -1,0 +1,65 @@
+@keyframes fadein {from {opacity: 0;} to {opacity: 1;}}
+.mapboxgl-popup {animation: fadein 0.2s;}
+
+.mapboxgl-popup {
+  z-index: 1000;
+
+  position: fixed;
+  width: 100%;
+  height: 40%;
+  top: 50%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  .mapboxgl-popup-tip {
+    display: none;
+  }
+
+  .mapboxgl-popup-content {
+    border-radius: 0px;
+    max-height: 100%;
+
+    .popup-root {
+      height: 100%;
+    }
+
+    .mapboxgl-popup-close-button {
+      font-size: 2em;
+    }
+  }
+
+  .popup-content {
+    width: 100%;
+    height: 100%;
+
+    .popup-content-container {
+      display: flex;
+      height: 100%;
+
+      .popup-content-container-left {
+        margin: 0 20px 0 0;
+        height: 100%;
+
+        img {
+          height: calc(100% - 60px);
+        }
+      }
+
+      .popup-content-container-right {
+        min-width: 60%;
+      }
+    }
+
+
+    h1, h2 {
+      margin: 0 0 .6em 0;
+    }
+
+    p {
+      margin: 0 0 1em 0;
+    }
+
+
+  }
+}
