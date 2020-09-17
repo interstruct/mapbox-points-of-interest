@@ -4,12 +4,80 @@ import mapboxgl from 'mapbox-gl';
 
 import Popup from "Popup";
 import "Map.scss"
-import points from "points.json";
+
 import token from "token.json";
+import points from "points.json";
+import markers from "markers.json";
 
 const PORTO_LNG = -8.6291;
 const PORTO_LAT = 41.1579;
 const ZOOM = 13;
+
+let loadMarkers = async (map, markers) => {
+  return Promise.all(
+    Object.entries(markers).map(([marker, filename]) =>
+      new Promise((resolve, reject) => {
+        map.loadImage(filename, (error, image) => {
+          if (error) {
+            reject(error);
+            return;
+          }
+
+          map.addImage(marker, image);
+          resolve();
+        })
+      })
+    )
+  )
+};
+
+const loadPoints = (map, points) => {
+  map.addSource("points", points)
+
+  map.addLayer({
+    id: "points",
+    type: "symbol",
+    source: "points",
+    layout: {
+      "icon-image": "{icon}",
+      "icon-allow-overlap": true,
+    },
+  });
+
+  map.on("click", "points", function(e) {
+    var coordinates = e.features[0].geometry.coordinates;
+    var properties = e.features[0].properties;
+    var id = properties.id;
+
+    if (document.querySelector(`#popup-root-${id}`)) {
+      return;
+    }
+
+    let popupComponent = <Popup {...properties} />;
+
+    new mapboxgl.Popup()
+      .setLngLat(coordinates)
+      .setHTML(`<div id="popup-root-${id}" />`)
+      .addTo(map);
+
+    ReactDOM.render(
+      popupComponent,
+      document.querySelector(`#popup-root-${id}`),
+    );
+
+    map.flyTo({
+      center: e.features[0].geometry.coordinates,
+    });
+  });
+
+  map.on("mouseenter", "points", function() {
+    map.getCanvas().style.cursor = "pointer";
+  });
+
+  map.on("mouseleave", "points", function() {
+    map.getCanvas().style.cursor = "";
+  });
+};
 
 const Map = function() {
   /* eslint-disable no-unused-vars */
@@ -44,52 +112,9 @@ const Map = function() {
     // Adds a fullscreen button to the map.
     map.addControl(new mapboxgl.FullscreenControl());
 
-    map.on("load", function() {
-      map.addSource("points", points);
-
-      map.addLayer({
-        id: "points",
-        type: "symbol",
-        source: "points",
-        layout: {
-          "icon-image": "{icon}-15",
-          "icon-allow-overlap": true
-        },
-      });
-    });
-
-    map.on("click", "points", function(e) {
-      var coordinates = e.features[0].geometry.coordinates;
-      var properties = e.features[0].properties;
-      var id = properties.id;
-
-      if (document.querySelector(`#popup-root-${id}`)) {
-        return;
-      }
-
-      let popupComponent = <Popup {...properties} />;
-
-      new mapboxgl.Popup()
-        .setLngLat(coordinates)
-        .setHTML(`<div id="popup-root-${id}" />`)
-        .addTo(map);
-
-      ReactDOM.render(
-        popupComponent,
-        document.querySelector(`#popup-root-${id}`),
-      );
-
-      map.flyTo({
-        center: e.features[0].geometry.coordinates,
-      });
-    });
-
-    map.on("mouseenter", "points", function() {
-      map.getCanvas().style.cursor = "pointer";
-    });
-
-    map.on("mouseleave", "points", function() {
-      map.getCanvas().style.cursor = "";
+    map.on("load", async () => {
+      await loadMarkers(map, markers);
+      loadPoints(map, points);
     });
   });
 
