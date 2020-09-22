@@ -1,17 +1,12 @@
 import React, { useState, useEffect } from "react";
-import ReactDOM from "react-dom";
 import mapboxgl from 'mapbox-gl';
+import cx from "classnames"
 
-import Popup from "Popup";
 import "Map.scss"
 
 import token from "token.json";
 import points from "points.json";
 import markers from "markers.json";
-
-const PORTO_LNG = -8.6291;
-const PORTO_LAT = 41.1579;
-const ZOOM = 13;
 
 let loadMarkers = async (map, markers) => {
   return Promise.all(
@@ -43,83 +38,91 @@ const loadPoints = (map, points) => {
       "icon-allow-overlap": true,
     },
   });
-
-  map.on("click", "points", function(e) {
-    var coordinates = e.features[0].geometry.coordinates;
-    var properties = e.features[0].properties;
-    var id = properties.id;
-
-    if (document.querySelector(`#popup-root-${id}`)) {
-      return;
-    }
-
-    let popupComponent = <Popup {...properties} />;
-
-    new mapboxgl.Popup()
-      .setLngLat(coordinates)
-      .setHTML(`<div id="popup-root-${id}" />`)
-      .addTo(map);
-
-    ReactDOM.render(
-      popupComponent,
-      document.querySelector(`#popup-root-${id}`),
-    );
-
-    map.flyTo({
-      center: e.features[0].geometry.coordinates,
-    });
-  });
-
-  map.on("mouseenter", "points", function() {
-    map.getCanvas().style.cursor = "pointer";
-  });
-
-  map.on("mouseleave", "points", function() {
-    map.getCanvas().style.cursor = "";
-  });
 };
 
-const Map = function() {
-  /* eslint-disable no-unused-vars */
-  const [lng, setLng] = useState(PORTO_LNG);
-  const [lat, setLat] = useState(PORTO_LAT);
-  const [zoom, setZoom] = useState(ZOOM);
-  /* eslint-enable no-unused-vars */
-
+const Map = function({ sidebarOpen, setSidebar, position, setPosition }) {
   let mapContainer;
 
+  const [map, setMap] = useState(null);
+
+  const onMapClick = (event) => {
+    map.on("click", function(event) {
+      if (event.defaultPrevented) { return; }
+
+      setSidebar({
+        open: false,
+        properties: {},
+      });
+    });
+  }
+
+  const onPointClick = (event) => {
+    event.preventDefault();
+
+    setSidebar({
+      open: true,
+      properties: event.features[0].properties,
+    })
+
+    setPosition({
+      coordinates: event.features[0].geometry.coordinates,
+      zoom: 16,
+    });
+  }
+  /* eslint-disable react-hooks/exhaustive-deps */
   useEffect(() => {
     mapboxgl.accessToken = token;
 
-    const map = new mapboxgl.Map({
+    setMap(new mapboxgl.Map({
       container: mapContainer,
       style: "mapbox://styles/mapbox/satellite-v9",
-      center: [lng, lat],
-      zoom: zoom
-    });
+      ...position,
+    }));
 
-    // The navigation control is the 3 buttons on the bottom right of the map.
-    // It allows to control zoom and orientation of the map using buttons instead of a mouse.
-    // It's usefull to more easly control the map in mobile mode.
+  }, [setSidebar, mapContainer]);
+  /* eslint-enable react-hooks/exhaustive-deps */
+
+  /* eslint-disable react-hooks/exhaustive-deps */
+  useEffect(() => {
+    if (!map) { return; }
+
     map.addControl(
       new mapboxgl.NavigationControl(),
       'bottom-right',
     );
 
-    // This control displays the ratio of a distance on the map to the corresponding distance on the ground.
     map.addControl(new mapboxgl.ScaleControl());
 
-    // Adds a fullscreen button to the map.
     map.addControl(new mapboxgl.FullscreenControl());
 
     map.on("load", async () => {
       await loadMarkers(map, markers);
-      loadPoints(map, points);
+      loadPoints(map, points, setSidebar, setPosition);
+
+      map.on("click", "points", onPointClick);
+      map.on("click", onMapClick);
     });
-  });
+  }, [map, setSidebar, setPosition]);
+  /* eslint-enable react-hooks/exhaustive-deps */
+
+  useEffect(() => {
+    if (!map) { return; }
+
+    map.flyTo(position);
+  }, [position, map]);
+
+  useEffect(() => {
+    if (!map) { return; }
+
+    map.resize();
+  }, [sidebarOpen, map]);
 
   return (
-    <div id="map" ref={(el) => mapContainer = el} />
+    <div
+      id="map"
+      className={cx({ "sidebar-open": sidebarOpen})}
+      ref={(el) => mapContainer = el}
+    />
   );
 }
 
