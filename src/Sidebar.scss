@@ -1,8 +1,26 @@
 #sidebar {
+  z-index: 1;
+  box-sizing: border-box;
   position: fixed;
   width: 25%;
+  height: 100%;
+  padding: 0px 10px;
+  box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
+
+  h2 {
+    margin-bottom: 5px;
+  }
+
+  span {
+    font-style: italic;
+  }
+
+  p {
+    line-height: 1.4;
+  }
 }
 
 .sidebar-content img {
   max-width: 100%;
+  margin-top: 20px;
 }
