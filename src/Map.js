@@ -53,6 +53,11 @@ const Map = function({ sidebarOpen, setSidebar, position, setPosition }) {
         open: false,
         properties: {},
       });
+
+      if (window.previousPosition) {
+        setPosition(window.previousPosition);
+        window.previousPosition = null;
+      }
     });
   }
 
@@ -64,8 +69,21 @@ const Map = function({ sidebarOpen, setSidebar, position, setPosition }) {
       properties: event.features[0].properties,
     })
 
+    // using global variables? 🤷
+    //
+    // The value of the previous map position we are saving here is used inside the "on load" map event handler function. This function belongs to
+    // a closure that will be lost on re-rendering of this Map component (since the function will run again), and therefore the new value of the
+    // position will not be known inside the "on load" map event handler. The only solution I could think of for this was to keep the previous map
+    // position in a closure outside this function (window object).
+    if (!window.previousPosition) {
+      window.previousPosition = {
+        center: map.getCenter().toArray(),
+        zoom: map.getZoom(),
+      };
+    }
+
     setPosition({
-      coordinates: event.features[0].geometry.coordinates,
+      center: event.features[0].geometry.coordinates,
       zoom: 16,
     });
   }
