@@ -1,8 +1,14 @@
 #map {
+  position: fixed;
   width: 100%;
   height: 100%;
-}
 
-.popup-content img {
-  max-width: 200px;
+  .mapboxgl-canvas {
+    outline: none;
+  }
+
+  &.sidebar-open {
+    width: 75%;
+    left: 25%;
+  }
 }
